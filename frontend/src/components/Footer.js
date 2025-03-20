@@ -31,9 +31,15 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-500"
+                className="flex-1 px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-100"
               />
-              <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200">
+              <button className="px-6 py-2 text-xl font-bold  rounded-lg  text-white bg-blue-500 hover:bg-blue-600"
+                // style={{
+                //   background: 'linear-gradient(to right, #FF6B6B, #4ECDC4)',
+                //   WebkitBackgroundClip: 'text',
+                //   WebkitTextFillColor: 'transparent',
+                // }}
+                >
                 Subscribe
               </button>
             </form>
@@ -48,15 +54,12 @@ export default function Footer() {
           <div>
             <h4 className="text-white text-lg font-semibold mb-4">About Bazario</h4>
             <p className="mb-4 text-sm leading-relaxed">
-              Your premier destination for multi-vendor shopping. We connect quality sellers with 
+              Your premier destination for multi-vendor shopping. We connect quality sellers with
               discerning buyers in a trusted Bazario environment.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-blue-400 transition-colors">
                 <Facebook size={20} />
-              </a>
-              <a href="#" className="hover:text-blue-400 transition-colors">
-                <Twitter size={20} />
               </a>
               <a href="#" className="hover:text-blue-400 transition-colors">
                 <Instagram size={20} />

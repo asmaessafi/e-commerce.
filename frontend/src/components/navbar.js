@@ -42,7 +42,14 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center">
-              <a href="#" className="text-2xl font-bold text-blue-600">Bazario</a>
+              <img src="./logo.png" className='w-14 h-14'></img>
+              <Link to="/"><span className="text-4xl font-bold text-center py-4"
+                style={{
+                  background: 'linear-gradient(to right, #FF6B6B, #4ECDC4)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >Bazario</span></Link>
             </div>
 
             {/* Search Bar - Hidden on mobile */}
@@ -61,21 +68,24 @@ export default function Navbar() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
+              <Link to="/about">About</Link>
+              <Link to="/shop">Shop</Link>
               <div className="relative">
                 <button
                   onClick={() => setIsCategoryOpen(!isCategoryOpen)}
                   className="flex items-center space-x-1 hover:text-blue-600"
                 >
+
                   <span>Categories</span>
                   <ChevronDown size={16} />
                 </button>
                 {isCategoryOpen && (
                   <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">Electronics</a>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">Fashion</a>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">Home & Garden</a>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">Sports</a>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">Beauty</a>
+                    <Link to="#" className="block px-4 py-2 hover:bg-gray-100">Electronics</Link>
+                    <Link to="#" className="block px-4 py-2 hover:bg-gray-100">Fashion</Link>
+                    <Link to="#" className="block px-4 py-2 hover:bg-gray-100">Home & Garden</Link>
+                    <Link to="#" className="block px-4 py-2 hover:bg-gray-100">Sports</Link>
+                    <Link to="#" className="block px-4 py-2 hover:bg-gray-100">Beauty</Link>
                   </div>
                 )}
               </div>
